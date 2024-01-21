@@ -1,7 +1,9 @@
 import express from 'express'
 import fruitBoxes from './data.js'
 import { uuid } from 'uuidv4'
+
 const app = express()
+app.use(express.static("dist"))
 
 app.get("/api/fruitbox/getAll", (req, res) => {
     res.json(fruitBoxes)
