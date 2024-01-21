@@ -12,6 +12,7 @@ app.get("/api/fruitbox/getAllById/:id", (req, res) => {
     res.json(filteredFruitboxes)
 })
 
+
 app.post("api/fruitbox/addFruitBox", (req, res) => {
     fruitBoxes.push({ Id: uuid, Name: req.body.name, Articles: req.body.articles })
     res.json(req.body).status(201)
